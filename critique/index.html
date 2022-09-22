@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>When Women Make Headlines</title><style>
+    /* cspell:disable-file */
+    /* webkit printing magic: print all background colors */
+    html {
+        -webkit-print-color-adjust: exact;
+    }
+    * {
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact;
+    }
+    
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    @media only screen {
+        body {
+            margin: 2em auto;
+            max-width: 900px;
+            color: rgb(55, 53, 47);
+        }
+    }
+    
+    body {
+        line-height: 1.5;
+        white-space: pre-wrap;
+    }
+    
+    a,
+    a.visited {
+        color: inherit;
+        text-decoration: underline;
+    }
+    
+    .pdf-relative-link-path {
+        font-size: 80%;
+        color: #444;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 0.75em;
+    }
+    
+    h1 {
+        font-size: 1.875rem;
+        margin-top: 1.875rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+        margin-top: 1.25rem;
+    }
+    
+    .source {
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 1.5em;
+        word-break: break-all;
+    }
+    
+    .callout {
+        border-radius: 3px;
+        padding: 1rem;
+    }
+    
+    figure {
+        margin: 1.25em 0;
+        page-break-inside: avoid;
+    }
+    
+    figcaption {
+        opacity: 0.5;
+        font-size: 85%;
+        margin-top: 0.5em;
+    }
+    
+    mark {
+        background-color: transparent;
+    }
+    
+    .indented {
+        padding-left: 1.5em;
+    }
+    
+    hr {
+        background: transparent;
+        display: block;
+        width: 100%;
+        height: 1px;
+        visibility: visible;
+        border: none;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+    }
+    
+    img {
+        max-width: 100%;
+    }
+    
+    @media only print {
+        img {
+            max-height: 100vh;
+            object-fit: contain;
+        }
+    }
+    
+    @page {
+        margin: 1in;
+    }
+    
+    .collection-content {
+        font-size: 0.875rem;
+    }
+    
+    .column-list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .column {
+        padding: 0 1em;
+    }
+    
+    .column:first-child {
+        padding-left: 0;
+    }
+    
+    .column:last-child {
+        padding-right: 0;
+    }
+    
+    .table_of_contents-item {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.3;
+        padding: 0.125rem;
+    }
+    
+    .table_of_contents-indent-1 {
+        margin-left: 1.5rem;
+    }
+    
+    .table_of_contents-indent-2 {
+        margin-left: 3rem;
+    }
+    
+    .table_of_contents-indent-3 {
+        margin-left: 4.5rem;
+    }
+    
+    .table_of_contents-link {
+        text-decoration: none;
+        opacity: 0.7;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid rgba(55, 53, 47, 0.09);
+        border-collapse: collapse;
+    }
+    
+    table {
+        border-left: none;
+        border-right: none;
+    }
+    
+    th,
+    td {
+        font-weight: normal;
+        padding: 0.25em 0.5em;
+        line-height: 1.5;
+        min-height: 1.5em;
+        text-align: left;
+    }
+    
+    th {
+        color: rgba(55, 53, 47, 0.6);
+    }
+    
+    ol,
+    ul {
+        margin: 0;
+        margin-block-start: 0.6em;
+        margin-block-end: 0.6em;
+    }
+    
+    li > ol:first-child,
+    li > ul:first-child {
+        margin-block-start: 0.6em;
+    }
+    
+    ul > li {
+        list-style: disc;
+    }
+    
+    ul.to-do-list {
+        text-indent: -1.7em;
+    }
+    
+    ul.to-do-list > li {
+        list-style: none;
+    }
+    
+    .to-do-children-checked {
+        text-decoration: line-through;
+        opacity: 0.375;
+    }
+    
+    ul.toggle > li {
+        list-style: none;
+    }
+    
+    ul {
+        padding-inline-start: 1.7em;
+    }
+    
+    ul > li {
+        padding-left: 0.1em;
+    }
+    
+    ol {
+        padding-inline-start: 1.6em;
+    }
+    
+    ol > li {
+        padding-left: 0.2em;
+    }
+    
+    .mono ol {
+        padding-inline-start: 2em;
+    }
+    
+    .mono ol > li {
+        text-indent: -0.4em;
+    }
+    
+    .toggle {
+        padding-inline-start: 0em;
+        list-style-type: none;
+    }
+    
+    /* Indent toggle children */
+    .toggle > li > details {
+        padding-left: 1.7em;
+    }
+    
+    .toggle > li > details > summary {
+        margin-left: -1.1em;
+    }
+    
+    .selected-value {
+        display: inline-block;
+        padding: 0 0.5em;
+        background: rgba(206, 205, 202, 0.5);
+        border-radius: 3px;
+        margin-right: 0.5em;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        white-space: nowrap;
+    }
+    
+    .collection-title {
+        display: inline-block;
+        margin-right: 1em;
+    }
+    
+    .simple-table {
+        margin-top: 1em;
+        font-size: 0.875rem;
+        empty-cells: show;
+    }
+    .simple-table td {
+        height: 29px;
+        min-width: 120px;
+    }
+    
+    .simple-table th {
+        height: 29px;
+        min-width: 120px;
+    }
+    
+    .simple-table-header-color {
+        background: rgb(247, 246, 243);
+        color: black;
+    }
+    .simple-table-header {
+        font-weight: 500;
+    }
+    
+    time {
+        opacity: 0.5;
+    }
+    
+    .icon {
+        display: inline-block;
+        max-width: 1.2em;
+        max-height: 1.2em;
+        text-decoration: none;
+        vertical-align: text-bottom;
+        margin-right: 0.5em;
+    }
+    
+    img.icon {
+        border-radius: 3px;
+    }
+    
+    .user-icon {
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 100%;
+        margin-right: 0.5rem;
+    }
+    
+    .user-icon-inner {
+        font-size: 0.8em;
+    }
+    
+    .text-icon {
+        border: 1px solid #000;
+        text-align: center;
+    }
+    
+    .page-cover-image {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        max-height: 30vh;
+    }
+    
+    .page-header-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .page-header-icon-with-cover {
+        margin-top: -0.72em;
+        margin-left: 0.07em;
+    }
+    
+    .page-header-icon img {
+        border-radius: 3px;
+    }
+    
+    .link-to-page {
+        margin: 1em 0;
+        padding: 0;
+        border: none;
+        font-weight: 500;
+    }
+    
+    p > .user {
+        opacity: 0.5;
+    }
+    
+    td > .user,
+    td > time {
+        white-space: nowrap;
+    }
+    
+    input[type="checkbox"] {
+        transform: scale(1.5);
+        margin-right: 0.6em;
+        vertical-align: middle;
+    }
+    
+    p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    
+    .image {
+        border: none;
+        margin: 1.5em 0;
+        padding: 0;
+        border-radius: 0;
+        text-align: center;
+    }
+    
+    .code,
+    code {
+        background: rgba(135, 131, 120, 0.15);
+        border-radius: 3px;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-size: 85%;
+        tab-size: 2;
+    }
+    
+    code {
+        color: #eb5757;
+    }
+    
+    .code {
+        padding: 1.5em 1em;
+    }
+    
+    .code-wrap {
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+    
+    .code > code {
+        background: none;
+        padding: 0;
+        font-size: 100%;
+        color: inherit;
+    }
+    
+    blockquote {
+        font-size: 1.25em;
+        margin: 1em 0;
+        padding-left: 1em;
+        border-left: 3px solid rgb(55, 53, 47);
+    }
+    
+    .bookmark {
+        text-decoration: none;
+        max-height: 8em;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+    }
+    
+    .bookmark-title {
+        font-size: 0.85em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 1.75em;
+        white-space: nowrap;
+    }
+    
+    .bookmark-text {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bookmark-info {
+        flex: 4 1 180px;
+        padding: 12px 14px 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .bookmark-image {
+        width: 33%;
+        flex: 1 1 180px;
+        display: block;
+        position: relative;
+        object-fit: cover;
+        border-radius: 1px;
+    }
+    
+    .bookmark-description {
+        color: rgba(55, 53, 47, 0.6);
+        font-size: 0.75em;
+        overflow: hidden;
+        max-height: 4.5em;
+        word-break: break-word;
+    }
+    
+    .bookmark-href {
+        font-size: 0.75em;
+        margin-top: 0.25em;
+    }
+    
+    .sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+    .code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+    .serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+    .mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+    .pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+    .pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+    .pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+    .pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+    .pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+    .pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+    .pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+    .pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+    .pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+    .pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+    .pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+    .pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+    .pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+    .pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+    .pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+    .pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+    .highlight-default {
+        color: rgba(55, 53, 47, 1);
+    }
+    .highlight-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+    }
+    .highlight-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+    }
+    .highlight-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+    }
+    .highlight-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+    }
+    .highlight-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+    }
+    .highlight-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+    }
+    .highlight-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+    }
+    .highlight-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+    }
+    .highlight-red {
+        color: rgba(212, 76, 71, 1);
+        fill: rgba(212, 76, 71, 1);
+    }
+    .highlight-gray_background {
+        background: rgba(241, 241, 239, 1);
+    }
+    .highlight-brown_background {
+        background: rgba(244, 238, 238, 1);
+    }
+    .highlight-orange_background {
+        background: rgba(251, 236, 221, 1);
+    }
+    .highlight-yellow_background {
+        background: rgba(251, 243, 219, 1);
+    }
+    .highlight-teal_background {
+        background: rgba(237, 243, 236, 1);
+    }
+    .highlight-blue_background {
+        background: rgba(231, 243, 248, 1);
+    }
+    .highlight-purple_background {
+        background: rgba(244, 240, 247, 0.8);
+    }
+    .highlight-pink_background {
+        background: rgba(249, 238, 243, 0.8);
+    }
+    .highlight-red_background {
+        background: rgba(253, 235, 236, 1);
+    }
+    .block-color-default {
+        color: inherit;
+        fill: inherit;
+    }
+    .block-color-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+    }
+    .block-color-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+    }
+    .block-color-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+    }
+    .block-color-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+    }
+    .block-color-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+    }
+    .block-color-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+    }
+    .block-color-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+    }
+    .block-color-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+    }
+    .block-color-red {
+        color: rgba(212, 76, 71, 1);
+        fill: rgba(212, 76, 71, 1);
+    }
+    .block-color-gray_background {
+        background: rgba(241, 241, 239, 1);
+    }
+    .block-color-brown_background {
+        background: rgba(244, 238, 238, 1);
+    }
+    .block-color-orange_background {
+        background: rgba(251, 236, 221, 1);
+    }
+    .block-color-yellow_background {
+        background: rgba(251, 243, 219, 1);
+    }
+    .block-color-teal_background {
+        background: rgba(237, 243, 236, 1);
+    }
+    .block-color-blue_background {
+        background: rgba(231, 243, 248, 1);
+    }
+    .block-color-purple_background {
+        background: rgba(244, 240, 247, 0.8);
+    }
+    .block-color-pink_background {
+        background: rgba(249, 238, 243, 0.8);
+    }
+    .block-color-red_background {
+        background: rgba(253, 235, 236, 1);
+    }
+    .select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+    .select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+    .select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+    .select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+    .select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+    .select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+    .select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+    .select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+    .select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+    .select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+    
+    .checkbox {
+        display: inline-flex;
+        vertical-align: text-bottom;
+        width: 16;
+        height: 16;
+        background-size: 16px;
+        margin-left: 2px;
+        margin-right: 5px;
+    }
+    
+    .checkbox-on {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+    
+    .checkbox-off {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+    }
+        
+    </style></head><body><article id="71da6d55-dc1f-46a8-b479-c34c0e629010" class="page sans"><header><h1 class="page-title">When Women Make Headlines</h1></header><div class="page-body"><p id="ae7e7875-9885-4b43-93ec-cade815add00" class=""><strong>A VISUAL ESSAY ABOUT THE (MIS)REPRESENTATION OF WOMEN IN THE NEWS: </strong>By Leonardo Nicoletti and Sahiti Sarva </p><h2 id="289faf4c-b6c6-49b3-aecf-15f53f6bbe88" class="block-color-yellow_background"><strong>Data &amp; Abstractions</strong></h2><blockquote id="8c6efe81-0114-4bc7-97e7-b3c9d00f31cd" class=""><em>Choice of data for the story &amp; selection of the insight abstractions</em></blockquote><p id="ab9d741d-4764-47be-89a4-792d07571290" class="">The article revolves around the idea that women are under-represented in news headlines. In rare occasions that women do make these headlines, there is a pattern in the language and words that are associated with the word ‘woman’. </p><p id="397c95bb-e995-4cf4-b136-e2e2d6811d04" class="">The insights to drive the data are derived from<strong> 382,139</strong> headlines published between 2005 and 2021. </p><p id="ec72a796-63d9-42cd-a48a-10c30aa17121" class="">The articles are published by top <strong>English</strong>-language news publications and news agencies in <strong>four countries - </strong>United States of America (US), India, South Africa, and the United Kingdom (UK).  </p><p id="98c33d9b-e8f4-4df2-92cc-0b29995f87de" class="">A total of 1<strong>86 publications </strong>and<strong> 1231 unique words</strong> have been considered.</p><h2 id="1be1eddf-42d4-4729-a10a-a7786239c2ca" class="block-color-yellow_background"><strong>Visuals &amp; Representations</strong></h2><blockquote id="6e132394-a18b-41a5-9e1b-790ad58afdad" class=""><em>Choice of appropriate visuals and data representations</em></blockquote><p id="98e1cdd5-f3c9-425f-a875-055f42ccb543" class="">Data in the article is represented in 7 formats as stated below:</p><ol type="1" id="029a5943-d2ab-4ebb-9bbc-7f2c45f5a5e9" class="numbered-list" start="1"><li>Bar chart (single word highlight): Each horizontal tick represents one of the 1231 words. The ticks are ordered in decreasing order of their frequency. Each of the 5 column represents the countries.</li></ol><ol type="1" id="daff3f55-eccf-49af-b07a-c4e27843f769" class="numbered-list" start="2"><li>Bar chart (category highlight)<strong> </strong>: Used to show the categories into which unique words have been classified. namely: Crime and Violence, Empowerment, People and places, Race, Ethnicity and INentity. The ticks have been color coded to depict the categories.</li></ol><ol type="1" id="d3b91262-c366-4e8f-9f0f-1ff30cc0ece3" class="numbered-list" start="3"><li>Bar chart (cumulative categories): Words that fall into recognised categories are depicted as coloured ticks and the rest are left grey.</li></ol><ol type="1" id="fd4456df-673f-4cb1-a27f-f9a99e8ccc92" class="numbered-list" start="4"><li>Bar chart (vertical columns for each category): Each column represents a category. The length of the column is the sum of the words that fall under the category.</li></ol><ol type="1" id="5542b8f6-2bc5-4864-a0cb-ced689731ad5" class="numbered-list" start="5"><li>Line Graph: Used to depict sentiment analysis of headlines about women. High scores for polarity is given to those news which are either too positive or too negative. It shows that headlines about women incite more sentiments than other headlines.</li></ol><ol type="1" id="f0ada596-9869-441a-833b-f48f391deb36" class="numbered-list" start="6"><li>Dot Plot / Polar Graph</li></ol><ol type="1" id="db7fee53-98bd-4cbd-a707-45018cf63e36" class="numbered-list" start="7"><li>Bubble Chart</li></ol><ol type="1" id="9ef27449-4a76-45ac-864a-b079e6dd0c3b" class="numbered-list" start="8"><li>Linear Plot with Stream Graph</li></ol><h2 id="62c04a7a-2102-42ab-8a31-9ee37509f5a1" class="block-color-yellow_background"><strong>Aesthetics &amp; Design</strong> </h2><blockquote id="acbc462b-bb02-47ed-8d0d-79f793ffa5ca" class=""><em>Choice of aesthetics for the visuals &amp; design elements for the story</em></blockquote><h3 id="9d60eb33-b098-4297-86ce-ee1aedae6923" class="">Color </h3><ul id="fe97c207-949e-47f3-a812-8ef37b7e3265" class="bulleted-list"><li style="list-style-type:disc">Type 1: The article uses minimal colours for the bar charts. The ticks are shown is pale yellow and the highlighted word is depicted in a black tick. </li></ul><ul id="e1ba5f79-f931-435e-af23-6056288acb6b" class="bulleted-list"><li style="list-style-type:disc">Type 2, 3, 4: For categories 5 high contrast colours are used. </li></ul><ul id="4eaf6e42-05f8-4167-8c51-752698d9982a" class="bulleted-list"><li style="list-style-type:disc">Type 5: In the line graph, two colours (green and black) are used. Green is used to show the headlines about women and Black headline is used for line on other topics</li></ul><h3 id="31b69fbd-ce10-4e9f-a4cd-cb6be54d1066" class="">Mark</h3><p id="22d38d3e-fe35-40ba-a3cc-97780279e310" class="">Type 1, 2, 3, 4: Horizontal ticks are used to mark the words</p><p id="3193241f-3a0c-4dd3-8583-e9dfc4a994f8" class="">Type 5: Lines</p><h3 id="e81c2eb4-d7c5-444b-b59d-00a684f4efbb" class="">Structure</h3><p id="9d90f186-2d56-4c43-99e3-26f4bd9a0b18" class="">Type 1, 2, 3, 4: Bar Graph</p><p id="6954c1ac-3920-4925-881d-a58f4a319777" class="">Type 5: Line Graph</p><h2 id="3c62ad5a-dc2d-441d-b321-27bd757186c9" class="block-color-yellow_background"><strong>Framing &amp; Transition</strong> </h2><blockquote id="e6843d1f-286c-45dc-bce6-abc1a926a3a9" class=""><em>Choice of framing the representations &amp; transitioning across frames</em></blockquote><p id="2532872f-c303-459c-b0ef-8e1b4da73356" class="">Type 1, 2, 3: The base of the bar graph remains constant and with each vertical scroll, different words and categories are highlighted. </p><p id="386b2a04-eed7-455b-92c7-a8d61f261627" class="">Type 4: In the category bar graph, the visualization is static. In hover stage it shows the words that have been added to the category. </p><p id="48dc5abf-a027-4257-8ac5-1e7b3adf40c1" class="">Type 5: Line graph is static, but a short animation plays to show the journey of the lines from 2010 to 2020.</p><h2 id="5d5ab7ce-3523-4abd-9a9c-6362fd87d026" class="block-color-yellow_background"><strong>Messaging &amp; Annotation</strong> </h2><blockquote id="320d101e-8caa-45b1-8513-fefe091d361e" class=""><em>Choice of verbal messaging &amp; text annotation to tell the story</em></blockquote><p id="af213a35-9c50-4875-8b59-cfc7f9f41f08" class="">Type 1, 2, 3: The countries are annotated at the top of the graph along x axis. Along the y axis, word occurrence is annotated.</p><p id="fa517223-f8d5-4fa3-a87e-09b157970723" class="">Type 4: Each category is annotated along the x axis beneath each column. </p><p id="1e274c44-fdcd-4900-b593-4d12f766a86e" class="">Type 5: The average polarity of news headlines is annotated on the y axis. Years are annotated on the x axis. Each of the two line is annotated with their meaning.</p><h2 id="bc80df83-4555-4e4b-ba9c-66191e0cd617" class="block-color-yellow_background"><strong>Flow &amp; Coherence</strong></h2><blockquote id="8e45a0c5-cd3c-47da-9b1a-2b96e59349e1" class=""><em>Choice of flow of the narrative &amp; coherence of the plot</em></blockquote><ul id="78aeff8d-8af8-4b11-9f36-6a1da4501bcc" class="bulleted-list"><li style="list-style-type:disc">The article begins with a simple bar graph that is simple and easy to understand. Slowly cumulative charts are introduced. </li></ul><ul id="7dc3147c-ca92-4ffa-bc93-591bcfd9d9a2" class="bulleted-list"><li style="list-style-type:disc">In new sections, new data is introduced and the visualisation start to get more complex. </li></ul><ul id="0bc67b52-4994-4b9b-a26b-5834d727c4af" class="bulleted-list"><li style="list-style-type:disc">There is little to no correlation within the sections. </li></ul><ul id="76222519-8de8-4dc9-8515-c502e010ce2f" class="bulleted-list"><li style="list-style-type:disc">Each visualization is based on a completely new data set. Some visualizations span across several frames, making it difficult to understand.</li></ul><h3 id="2d62293e-6315-4079-a177-0c528ea4d1e4" class="">Sections in the article</h3><ol type="1" id="e7974950-f58e-4e48-8ea0-9287687c7928" class="numbered-list" start="1"><li>Words used in headlines about women</li></ol><ol type="1" id="09e55bdb-cb8e-4c7a-bb11-fd1a30abd625" class="numbered-list" start="2"><li>Headlines about women are more sensational</li></ol><ol type="1" id="56139bdf-4124-4715-ac67-3c152ed2d92d" class="numbered-list" start="3"><li>Here’s how polarising headlines are</li></ol><ol type="1" id="3bfdcf1e-1c67-4bd4-892b-83d18ac630c3" class="numbered-list" start="4"><li>Here’s how biased headlines are</li></ol><ol type="1" id="1fe74cca-ff9a-4cfa-a369-6413eeee8fa2" class="numbered-list" start="5"><li>Headline Trends: Less gendered language. More empowering words. </li></ol><h2 id="f79d81ca-9421-4317-aa04-18986f2c1b51" class="block-color-yellow_background"><strong>Interaction &amp; Engagement</strong> </h2><blockquote id="5a26c24c-84b5-4b44-9e35-62275840d9c5" class=""><em>Choice of interaction elements &amp; engaging the audience</em></blockquote><p id="e1f20d09-4c9b-4457-a560-fe8b1afd8706" class="">Type 1, 2: Data reveals on vertical scrolling. No interaction with the visualization.</p><p id="64d5a1a1-8ed6-461e-a494-94979e11e333" class="">Type 3: Words are revealed on hovering over the ticks in all of the columns. There is a search bar that allows to search words within this cumulative visualization.</p><p id="5f858cd5-e809-4cf2-8336-adc55098efc1" class="">Type 4: Words are revealed on hovering over the segments on the vertical section of each category.</p><p id="ecfd6725-f0ee-48f2-8b70-8e16d0c7fa8b" class="">Type 5: No interaction, static visual with a short animation.</p><p id="669c0af5-3254-4d10-b662-aa83403a4e95" class="">
+    </p></div></article></body></html>
